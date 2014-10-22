@@ -39,25 +39,31 @@ body {
 				left: 100%;
 			}
 
-			&:first-child {
-				padding-left: 0;
-			}
-
-			&:last-child {
-				padding-right: 0;
-
-				&:after {
-					display: none;
-				}
-			}
-
 			&.nav-item-left {
 				float: left;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &.last-item {
+                   &:after {
+                     display: none;
+                   }
+                 }
 			}
 
 
 			&.nav-item-right {
 				float: right;
+
+                &.last-item {
+                    padding-right: 0;
+
+                    &:after {
+                      display: none;
+                    }
+                }
 			}
 		}
 	}
