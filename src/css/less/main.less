@@ -1,0 +1,64 @@
+@import '_variables.less';
+
+
+body {
+	background-color: @white;
+	color: @black;
+	font-family: 'Scada', sans-serif;
+}
+
+
+.container { // OVERRIDE
+	max-width: @containerWidth;
+}
+
+
+#top-bar {
+	height: @topBarHeight;
+	width: 100%;
+	background-color: @topBarBlack;
+	color: @darkGray;
+	font-family: 'Archivo Narrow', sans-serif;
+	text-transform: uppercase;
+
+	ul.top-bar-nav {
+		margin: 0;
+		padding: 0;
+
+		li.nav-item {
+			display: inline-block;
+			line-height: @topBarHeight;
+			height: @topBarHeight;
+			padding: 0 24px;
+			position: relative;
+
+			&:after {
+				content: "|";
+				position: absolute;
+				top: -1px;
+				left: 100%;
+			}
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+
+				&:after {
+					display: none;
+				}
+			}
+
+			&.nav-item-left {
+				float: left;
+			}
+
+
+			&.nav-item-right {
+				float: right;
+			}
+		}
+	}
+}
