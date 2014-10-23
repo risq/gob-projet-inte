@@ -3,7 +3,7 @@ var plugins = require('gulp-load-plugins')();
 var del = require('del');
 
 var paths = {
-    less: ['./src/css/less/*.less'],
+    less: ['./src/css/less/main.less'],
     cssLibs: ['!./src/css/main.css', './src/css/*.css'],
     js: ['./src/js/*.js'],
     font: './src/font/**',
@@ -39,7 +39,7 @@ gulp.task('less', function() {
 
 gulp.task('less-dev', function() {
   gulp.src(paths.less)
-    .pipe(plugins.concat('main.css'))
+    .pipe(plugins.concat('main.less'))
     .pipe(plugins.less())
     .pipe(plugins.autoprefixer())
     .pipe(gulp.dest('./src/css/'));
