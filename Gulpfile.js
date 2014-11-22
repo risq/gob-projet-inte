@@ -39,7 +39,7 @@ gulp.task('less', function() {
 
 gulp.task('less-dev', function() {
   gulp.src(paths.less)
-    .pipe(plugins.concat('main.css'))
+    .pipe(plugins.concat('main.less'))
     .pipe(plugins.less())
     .pipe(plugins.autoprefixer())
     .pipe(gulp.dest('./src/css/'));
