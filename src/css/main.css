@@ -15,6 +15,36 @@ body {
 }
 .container {
   max-width: 1171px;
+  position: relative;
+}
+.button,
+.label {
+  display: inline-block;
+  height: 34px;
+  line-height: 32px;
+  box-sizing: border-box;
+  background-color: #fbfbfb;
+  color: #aaaaaa;
+  text-decoration: none;
+  position: relative;
+  border: 2px solid #aaaaaa;
+  border-radius: 4px;
+  font-family: 'Scada', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 8px;
+  outline: none;
+}
+.button:hover,
+.label:hover,
+.button:focus,
+.label:focus {
+  background-color: #aaaaaa;
+  color: #fbfbfb;
+}
+.button {
+  cursor: pointer;
 }
 #top-bar {
   height: 46px;
@@ -58,4 +88,81 @@ body {
 }
 #top-bar ul.top-bar-nav li.nav-item.nav-item-right.last-item:after {
   display: none;
+}
+#page-header {
+  height: 187px;
+  position: relative;
+  box-shadow: 0px 2px 3px 0px #e5e5e5;
+}
+#page-header .main-title {
+  line-height: 141px;
+  text-align: center;
+  font-size: 42px;
+  text-transform: uppercase;
+  font-family: 'Source Code Pro';
+  font-weight: 600;
+  padding-bottom: 46px;
+  margin: 0;
+}
+#page-header .header-top-container,
+#page-header .header-bottom-container {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+}
+#page-header .header-top-container {
+  top: 0;
+}
+#page-header .header-bottom-container {
+  bottom: 0;
+  height: 46px;
+  border-top: 1px solid #eeeeee;
+  box-sizing: border-box;
+  font-size: 0;
+}
+#page-header .header-bottom-container .dropdown-nav {
+  display: inline-block;
+}
+#page-header .header-bottom-container .dropdown-nav .inlile-items {
+  height: 46px;
+}
+#page-header .header-bottom-container .dropdown-nav .inlile-items .dropdown-pane {
+  display: none;
+}
+.slider {
+  background-color: #cccccc;
+  height: 550px;
+}
+ul.inlile-items {
+  padding: 0;
+  display: inline-block;
+  margin: 0;
+}
+ul.inlile-items li {
+  display: inline-block;
+  margin-right: 56px;
+}
+ul.inlile-items li h2 {
+  font-size: 16px;
+  padding: 12px 0;
+  box-sizing: border-box;
+  border-top: 1px solid #eeeeee;
+  margin-top: -1px;
+}
+ul.inlile-items li h2:hover {
+  border-top: 1px solid #272727;
+}
+.search-container {
+  display: inline-block;
+  font-size: initial;
+  float: right;
+  height: 46px;
+  padding: 4px 0px;
+}
+.search-container input {
+  height: 34px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
 }

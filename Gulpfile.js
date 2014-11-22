@@ -84,4 +84,6 @@ gulp.task('watch', function() {
 
 gulp.task('build', ['clean', 'less', 'js', 'css', 'font', 'img', 'html']);
 
+gulp.task('dev', ['watch']);
+
 gulp.task('default', ['build']);

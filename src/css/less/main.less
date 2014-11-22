@@ -10,14 +10,42 @@ body {
 
 .container { // OVERRIDE
 	max-width: @containerWidth;
+	position: relative;
 }
 
+.button, .label {
+	display: inline-block;
+	height: 34px;
+	line-height: 32px;
+	box-sizing: border-box;
+	background-color: @white;
+	color: @grayAA;
+	text-decoration: none;
+	position: relative;
+	border: 2px solid @grayAA;
+	border-radius: 4px;
+	font-family: 'Scada', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 0 8px;
+	outline: none;
+
+	&:hover, &:focus {
+		background-color: @grayAA;
+		color: @white;
+	}
+}
+
+.button {
+	cursor: pointer;
+}
 
 #top-bar {
 	height: @topBarHeight;
 	width: 100%;
 	background-color: @topBarBlack;
-	color: @darkGray;
+	color: @grayBC;
 	font-family: 'Archivo Narrow', sans-serif;
 	text-transform: uppercase;
 
@@ -66,5 +94,108 @@ body {
                 }
 			}
 		}
+	}
+}
+
+#page-header {
+	height: @headerHeight;
+	//overflow: hidden;
+	position: relative;
+	box-shadow: 0px 2px 3px 0px #e5e5e5;
+
+	.main-title {
+		line-height: @headerHeight - @headerNavHeight;
+		text-align: center;
+  		font-size: 42px;
+  		text-transform: uppercase;
+  		font-family: 'Source Code Pro';
+  		font-weight: 600;
+  		padding-bottom: @headerNavHeight;
+  		margin: 0;
+	}
+
+	.header-top-container,
+	.header-bottom-container {
+		position: absolute;
+		left: 10px;
+		right: 10px;
+	}
+
+	.header-top-container {
+		top: 0;
+	}
+
+	.header-bottom-container {
+		bottom: 0;
+		height: @headerNavHeight;
+		border-top: 1px solid @grayEE;
+		box-sizing: border-box;
+		font-size: 0;
+
+		.dropdown-nav {
+			display: inline-block;
+
+			.inlile-items {
+				height: @headerNavHeight;
+
+				.dropdown-pane {
+					display: none;
+				}
+			}
+		}
+
+		
+	}
+}
+
+#main-content {
+
+}
+
+.slider {
+	background-color: @grayCC;
+	height: 550px;
+}
+
+ul.inlile-items {
+	padding: 0;
+	display: inline-block;
+	margin: 0;
+
+	li {
+		display: inline-block;
+		margin-right: 56px;
+
+		h2 {
+			font-size: 16px;
+			padding: 12px 0;
+			box-sizing: border-box;
+			border-top: 1px solid @grayEE;
+			margin-top: -1px;
+
+			&:hover {
+				border-top: 1px solid @black;
+			}
+		}
+	}
+}
+
+.search-container {
+	display: inline-block;
+	font-size: initial;
+	float: right;
+	height: 46px;
+	padding: 4px 0px;
+
+	input {
+		height: 34px;
+		border: 1px solid @grayCC;
+		border-radius: 4px;
+		outline: none;
+		box-sizing: border-box;
+	}
+
+	.button {
+
 	}
 }
