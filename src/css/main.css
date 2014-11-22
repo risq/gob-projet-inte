@@ -8,6 +8,25 @@
 **   VARIABLES
 **
 **/
+.maquette {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  pointer-events: none;
+}
+.maquette .maquette-img {
+  position: relative;
+  width: 1920px;
+  height: 4720px;
+  left: -50%;
+  z-index: 9999999;
+  background-image: url(../img/01_home_01_neg.png);
+  opacity: 0.5;
+  pointer-events: none;
+}
+.maquette.disabled {
+  display: none;
+}
 body {
   background-color: #fbfbfb;
   color: #272727;
@@ -16,6 +35,7 @@ body {
 .container {
   max-width: 1171px;
   position: relative;
+  padding: 0;
 }
 .button,
 .label {
@@ -107,8 +127,8 @@ body {
 #page-header .header-top-container,
 #page-header .header-bottom-container {
   position: absolute;
-  left: 10px;
-  right: 10px;
+  left: 0;
+  right: 0;
 }
 #page-header .header-top-container {
   top: 0;
@@ -132,6 +152,14 @@ body {
 .slider {
   background-color: #cccccc;
   height: 550px;
+}
+.slider ul.slides {
+  padding: 0;
+  margin: 0;
+}
+.slider ul.slides .slide {
+  position: relative;
+  list-style: none;
 }
 ul.inlile-items {
   padding: 0;

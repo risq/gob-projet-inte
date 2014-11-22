@@ -1,5 +1,26 @@
 @import '_variables.less';
 
+.maquette {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	pointer-events: none;
+
+	.maquette-img {
+		position: relative;
+		width: 1920px;
+		height: 4720px;
+		left: -50%;
+		z-index: 9999999;
+		background-image: url(../img/01_home_01_neg.png);
+		opacity: 0.5;
+		pointer-events: none;
+	}
+
+	&.disabled {
+		display: none;
+	}
+}
 
 body {
 	background-color: @white;
@@ -11,6 +32,7 @@ body {
 .container { // OVERRIDE
 	max-width: @containerWidth;
 	position: relative;
+	padding: 0;
 }
 
 .button, .label {
@@ -117,8 +139,8 @@ body {
 	.header-top-container,
 	.header-bottom-container {
 		position: absolute;
-		left: 10px;
-		right: 10px;
+		left: 0;
+		right: 0;
 	}
 
 	.header-top-container {
@@ -155,6 +177,16 @@ body {
 .slider {
 	background-color: @grayCC;
 	height: 550px;
+
+	ul.slides {
+		padding: 0;
+		margin: 0;
+
+		.slide {
+			position: relative;
+			list-style: none;
+		}
+	}
 }
 
 ul.inlile-items {
