@@ -160,6 +160,7 @@ body {
 .slider ul.slides .slide {
   position: relative;
   list-style: none;
+  display: none;
 }
 ul.inlile-items {
   padding: 0;
@@ -193,4 +194,65 @@ ul.inlile-items li h2:hover {
   border-radius: 4px;
   outline: none;
   box-sizing: border-box;
+}
+.highlight {
+  height: 400px;
+  padding: 0;
+  margin-top: 32px;
+}
+.highlight article {
+  padding: 0 16px;
+}
+.highlight article:first-child {
+  padding-left: 0;
+}
+.highlight article:last-child {
+  padding-right: 0;
+}
+.highlight article.highlight-item {
+  height: 400px;
+  position: relative;
+}
+.highlight article.highlight-item .highlight-item-inner {
+  background-color: #cccccc;
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+.highlight section.highlight-demi-height-container {
+  padding: 0;
+}
+.highlight section.highlight-demi-height-container:last-child article.highlight-item {
+  padding-right: 0;
+}
+.highlight section.highlight-demi-height-container article {
+  height: 184px;
+}
+.highlight section.highlight-demi-height-container article:last-child {
+  margin-top: 32px;
+}
+.highlight section.highlight-demi-height-container article,
+.highlight section.highlight-demi-height-container article:first-child,
+.highlight section.highlight-demi-height-container article:last-child {
+  padding: 0 16px;
+}
+.highlight > article.highlight-item .highlight-title {
+  padding-top: 44px;
+}
+.highlight .highlight-title {
+  display: table-cell;
+  vertical-align: middle;
+  font-family: "Archivo Narrow";
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fbfbfb;
+}
+.highlight .highlight-title .highlight-caption {
+  font-size: 16px;
+  font-family: 'Scada';
+  font-weight: 400;
+  display: block;
 }
