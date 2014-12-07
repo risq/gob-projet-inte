@@ -157,12 +157,40 @@ body {
 		.dropdown-nav {
 			display: inline-block;
 
-			.inlile-items {
+			ul.inlile-items {
 				height: @headerNavHeight;
 
-				.dropdown-pane {
-					display: none;
+				> li {
+					display: inline-block;
+					float: left;
+
+					&:after {
+						content: " ";
+						clear: both;
+					}
+
+					&:hover, &:focus, &.active {
+						.dropdown-pane {
+							display: block;
+						}
+					}
+
+					.dropdown-pane {
+						display: none;
+						width: 0;
+						height: 0;
+
+						.dropdown-pane-inner {
+							background-color: @grayEE;
+							position: absolute;
+							top: 45px;
+							left: 0;
+							z-index: 10;
+							width: 100%;
+						}
+					}
 				}
+				
 			}
 		}
 
@@ -196,7 +224,7 @@ ul.inlile-items {
 	display: inline-block;
 	margin: 0;
 
-	li {
+	> li {
 		display: inline-block;
 		margin-right: 56px;
 
