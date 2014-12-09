@@ -157,7 +157,7 @@ body {
 		.dropdown-nav {
 			display: inline-block;
 
-			ul.inlile-items {
+			ul.inline-items {
 				height: @headerNavHeight;
 
 				> li {
@@ -219,7 +219,7 @@ body {
 	}
 }
 
-ul.inlile-items {
+ul.inline-items {
 	padding: 0;
 	display: inline-block;
 	margin: 0;
@@ -337,3 +337,24 @@ ul.inlile-items {
 	}
 }
 
+.categories-nav {
+	border-top: 1px solid @grayEE;
+	box-sizing: border-box;
+
+	ul.inline-items {
+
+		li {
+
+			h2 {
+				text-transform: uppercase;
+				font-weight: 800;
+				color: @grayAA;
+				font-family: 'Source Code Pro';
+			}
+
+			&:hover h2, &:focus h2, &.active h2 {
+				color: @black;
+			}
+		}
+	}
+}
