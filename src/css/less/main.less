@@ -156,6 +156,7 @@ body {
 
 		.dropdown-nav {
 			display: inline-block;
+			font-size: initial;
 
 			ul.inline-items {
 				height: @headerNavHeight;
@@ -170,9 +171,22 @@ body {
 					}
 
 					&:hover, &:focus, &.active {
+
+						a {
+							color: @lightRed;
+						}
+
 						.dropdown-pane {
 							display: block;
 						}
+					}
+
+					a {
+						color: @gray55;
+						text-decoration: none;
+						font-size: 16px;
+						font-family: 'Scada';
+						font-weight: 400;
 					}
 
 					.dropdown-pane {
@@ -187,24 +201,60 @@ body {
 							left: 0;
 							z-index: 10;
 							width: 100%;
+							height: 342px;
+
+							.sub-categories-list {
+								padding: 19px;
+
+								h3 {
+									font-family: 'Source Code Pro';
+									text-transform: uppercase;
+									font-weight: 600;
+									font-size: 16px;
+									color: @gray55;
+								}
+
+								ul {
+									font-family: Verdana, Geneva, sans-serif;
+									font-size: 14px;
+									padding: 0;
+									margin: 36px 0 0 0;
+									line-height: 34px;
+
+									li a {
+										color: @grayAA;
+										text-decoration: none;
+
+										&:hover {
+											color: @lightRed;
+										}
+									}
+								}
+							}
 						}
 					}
-				}
-				
+				}	
 			}
 		}
-
-		
 	}
 }
 
-#main-content {
+#page-content {
+	hr {
+		background-color: @grayEE;
+		margin-bottom: 76px;
+	}
 
+	.col hr {
+		margin-top: 0;
+		margin-bottom: 82px;
+	}
 }
 
 .slider {
 	background-color: @grayCC;
 	height: 550px;
+	margin-top: 18px;
 
 	ul.slides {
 		padding: 0;
@@ -228,16 +278,18 @@ ul.inline-items {
 		display: inline-block;
 		margin-right: 56px;
 
+		&:hover, &:focus, &.active {
+			h2 {
+				border-top: 1px solid @black;
+			}
+		}
+
 		h2 {
 			font-size: 16px;
 			padding: 12px 0;
 			box-sizing: border-box;
 			border-top: 1px solid @grayEE;
 			margin-top: -1px;
-
-			&:hover {
-				border-top: 1px solid @black;
-			}
 		}
 	}
 }
@@ -266,6 +318,23 @@ ul.inline-items {
 	height: 400px;
 	padding: 0;
 	margin-top: 32px;
+
+	&.highlight-small {
+		height: 430px;
+		margin-top: 4px;
+
+		.highlight-item {
+			height: 324px;
+		}
+	}
+
+	&.compact {
+		margin-top: 20px;
+
+		.highlight-item {
+			height: 290px;
+		}
+	}
 
 	article {
 		padding: 0 16px;
@@ -323,7 +392,7 @@ ul.inline-items {
 		font-family: "Archivo Narrow";
 		text-transform: uppercase;
 		font-weight: 900;
-		font-size: 50px;
+		font-size: 52px;
 		line-height: 50px;
 		text-align: center;
 		color: @white;
@@ -334,21 +403,81 @@ ul.inline-items {
 			font-weight: 400;
 			display: block;
 		}
+
+		&.title-important {
+			font-size: 114px;
+			letter-spacing: 0;
+			font-family: 'Source Code Pro';
+
+			.highlight-caption {
+				font-size: 22px;
+				line-height: 65px;
+				margin-top: -44px;
+				letter-spacing: 1px;
+			}
+		}
+	}
+
+	.bottom-caption {
+		text-align: center;
+
+		h4 {
+			color: @gray55;
+			margin-top: 4px;
+			margin-bottom: 2px;
+			font-size: 16px;
+		}
+
+		.price {
+			font-family: "Archivo Narrow";
+			color: @black;
+			font-size: 15px;
+			font-weight: 600;
+
+			.price-old {
+				color: @grayAA;
+				font-weight: 400;
+				text-decoration: line-through;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+.color-selector {
+	padding-top: 6px;
+	height: 27px;
+
+	.color-item {
+		height: 10px;
+		width: 24px;
+		display: inline-block;
+		background-color: @gray55;
+		border: 1px solid @grayBC;
+		margin-right: 6px;
+
+		&:last-item {
+			margin-right: 0;
+		}
 	}
 }
 
 .categories-nav {
 	border-top: 1px solid @grayEE;
 	box-sizing: border-box;
+	margin-top: 52px;
 
 	ul.inline-items {
 
+
 		li {
+			margin-right: 60px;
 
 			h2 {
 				text-transform: uppercase;
 				font-weight: 800;
 				color: @grayAA;
+				font-size: 18px;
 				font-family: 'Source Code Pro';
 			}
 
@@ -357,4 +486,78 @@ ul.inline-items {
 			}
 		}
 	}
+}
+
+
+.header-title {
+	border-bottom: 2px solid @grayEE;
+	box-sizing: border-box;
+	height: 58px;
+	margin-bottom: 9px;
+
+	&.margin-bottom {
+		margin-bottom: 3px;
+	}
+
+	&.margin-top {
+		margin-top: 10px;
+	}
+
+	h2 {
+		font-size: 30px;
+		margin: 0;
+	}
+}
+
+.brands {
+	padding-top: 24px; 
+
+	img {
+		margin-right: 26px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.col {
+	&.col-inner-padding {
+
+		&:first-child {
+			padding: 0 24px 0 0;
+		}
+
+		&:last-child {
+			padding: 0 0 0 24px;
+		}
+	}
+
+	&.col-padding-left,
+	&.col-padding-left:first-child,
+	&.col-padding-left:last-child {
+		padding-left: 48px;
+	}
+
+	&.col-no-padding {
+		padding: 0!important;
+	}
+}
+
+section.top-padding {
+	padding-top: 27px;
+}
+
+h3 {
+	color: @gray55;
+	text-transform: uppercase;
+	font-family: 'Source Code Pro';
+	font-weight: 600;
+	font-size: 18px;
+}
+
+p {
+	font-family: Verdana, Geneva, sans-serif;
+	color: @gray55;
+	font-size: 14px;
 }
